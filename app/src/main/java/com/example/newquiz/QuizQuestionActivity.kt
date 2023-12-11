@@ -1,6 +1,7 @@
 package com.example.newquiz
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,9 @@ class QuizQuestionActivity : AppCompatActivity() , View.OnClickListener{
     private var mQuestionList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int =0
     private var mUserName: Int? = null
+    private var mCorrectAnswer: Int? = null
+
+
 
     private var progressBar : ProgressBar? = null
     private var pView: TextView? = null
@@ -65,6 +69,7 @@ class QuizQuestionActivity : AppCompatActivity() , View.OnClickListener{
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setQuestion(){
         val question: Question=mQuestionList!![mCurrentPosition-1]
         defaultOptionView()
@@ -117,6 +122,7 @@ class QuizQuestionActivity : AppCompatActivity() , View.OnClickListener{
         tv.setTypeface(tv.typeface,Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(this,R.drawable.selected_option_border)
     }
+    @SuppressLint("SetTextI18n")
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.optionOne -> {
@@ -152,6 +158,12 @@ class QuizQuestionActivity : AppCompatActivity() , View.OnClickListener{
                         }
                         else ->{
                             Toast.makeText(this, "You have made it till end", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this,ResultActivity::class.java)
+                            intent.putExtra(Constants.USER_NAME,mUserName)
+                            intent.putExtra(Constants.CORRECT_ANSWERS,mCorrectAnswer)
+                            intent.putExtra(Constants.TOTAL_QUESTION,mQuestionList?.size)
+                            startActivity(intent)
+                            finish()
                         }
                     }
                 }else {
