@@ -19,7 +19,8 @@
         android:text="Quiz App!"
         android:textColor="@color/white"
         android:layout_marginBottom="15dp"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -44,7 +45,8 @@
                 android:text="Welcome"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                android:textStyle="bold">
+                android:textStyle="bold"
+                tools:ignore="HardcodedText">
 
             </TextView>
 
@@ -55,7 +57,8 @@
                 android:gravity="center"
                 android:text="Please Enter Your Name"
                 android:textColor="@color/black"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                tools:ignore="HardcodedText">
 
             </TextView>
 
@@ -68,7 +71,7 @@
                     android:id="@+id/edittext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Hassan"
+                    android:hint="@string/hassan"
                     android:inputType="textCapCharacters"
                     android:textColorHint="#546E7A"
                     tools:ignore="TextContrastCheck">
@@ -91,7 +94,8 @@
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:focusable="true" />
+                android:focusable="true"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
