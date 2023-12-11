@@ -4,6 +4,10 @@ import com.example.newquiz.Question
 import com.example.newquiz.R
 
 object Constants {
+    const val USER_NAME :String = "user_name"
+    const val TOTAL_QUESTION: String = "total_question"
+    const val CORRECT_ANSWERS: String = "correct_answers"
+
     fun getQuestion(): ArrayList<Question>{
         val questionList = ArrayList<Question>()
 
@@ -102,17 +106,6 @@ object Constants {
             2
         )
         questionList.add(que9)
-
-        val que10 = Question(
-            10, "This Flag Belongs to which Country?",
-            R.drawable.ic_flag_of_new_zealand,
-            "America",
-            "Afghanistan",
-            "Iran",
-            "NewZealand",
-            4
-        )
-        questionList.add(que10)
 
         return questionList
     }

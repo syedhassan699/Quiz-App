@@ -3,6 +3,7 @@ package com.example.newquiz
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.SyncStateContract.Constants
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 val intent = Intent(this,QuizQuestionActivity::class.java)
+                intent.putExtra(com.example.quiz.Constants.USER_NAME,edit.text.toString())
                 startActivity(intent)
                 finish()
 

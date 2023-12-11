@@ -3,4 +3,10 @@
     <string name="hassan">Hassan</string>
     <string name="finish">Finish</string>
     <string name="submit">Submit</string>
+    <string name="result">Result</string>
+    <string name="traphy">Traphy</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="name">name</string>
+    <string name="your_score_is_9_10">YOUR SCORE IS 9/10</string>
+    <string name="finish12">FINISH</string>
 </resources>
