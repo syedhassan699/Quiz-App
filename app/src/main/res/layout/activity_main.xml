@@ -71,7 +71,7 @@
                     android:id="@+id/edittext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hassan"
+                    android:hint="@string/name2"
                     android:inputType="textCapCharacters"
                     android:textColorHint="#546E7A"
                     tools:ignore="TextContrastCheck">

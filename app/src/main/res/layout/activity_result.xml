@@ -41,11 +41,11 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:text="Username"
         android:layout_marginTop="5dp"
-        android:textSize="18sp"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/score"
@@ -55,7 +55,8 @@
         android:textSize="14sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="@string/your_score_is_9_10"/>
+        tools:text= "YOU SCORE 7/9"
+        />
 
     <TextView
         android:id="@+id/finish"
