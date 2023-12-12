@@ -157,7 +157,6 @@ class QuizQuestionActivity : AppCompatActivity() , View.OnClickListener{
                             setQuestion()
                         }
                         else ->{
-                            Toast.makeText(this, "You have made it till end", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this,ResultActivity::class.java)
                             intent.putExtra(Constants.USER_NAME,mUserName)
                             intent.putExtra(Constants.CORRECT_ANSWERS,mCorrectAnswer)
